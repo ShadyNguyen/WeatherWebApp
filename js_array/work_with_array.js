@@ -178,29 +178,51 @@ var languages1 = [ // khai báo cách 1
         var sports = [
             {
                 name: 'Bơi lội',
-                gold: 11
+                gold: 11,
+                slivers: 30
             },
             {
                 name: 'Boxing',
-                gold: 3
+                gold: 3,
+                slivers: 300
             },
             {
                 name: 'Đạp xe',
-                gold: 4
+                gold: 4,
+                slivers: 60
             },
             {
                 name: 'Đấu kiếm',
-                gold: 5
+                gold: 5,
+                slivers: 50
             },
         ]
 
-        function getTotalGold(sports) {
-            let goldCharm = sports.reduce(function(accumulator, currentValue){
-                return accumulator + currentValue.gold;
-            }, 0);
+        var self = [100,200,300,400,500,600,700]
+
+         function getTotalGold() {
+            let goldCharm = self.reduce(function(accumulator, currentValue){
+                return accumulator + currentValue;
+            },5);
             return goldCharm;
         }
         
         
         // Expected results:
-        console.log(getTotalGold(sports)) // Output: 23
+        console.table(getTotalGold(self)); // Output: 23
+
+        const number = [1,2,3,4,5,6,];
+
+        Array.prototype.reduce2 = function(callback, results) {
+            for (let i = 0; i < this.length; i++) { 
+                callback(results, this[i], i, this.length);
+            }
+        };
+
+        var results = number.reduce2((accumulator, currentValue) => { 
+            return accumulator + currentValue;
+        },0);
+
+
+
+        String.prototype.concat(String.prototype)
