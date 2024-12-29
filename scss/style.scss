@@ -1,0 +1,38 @@
+@import "../scss/_variable";
+@import "../scss/_mixin";
+
+html {
+    font-size: 62.5%;
+}
+
+p {
+    color: $textColor;
+
+}
+
+
+
+body {
+    .header { 
+        padding: 2rem;
+        @include bgMainColor(aqua);
+        &-inner {
+            color: white;
+            &-text {
+                font-weight: 600;
+            }
+            &:hover {
+                color: aqua;
+            }
+        }
+        @include minWidth(1024px) {
+            display: none;
+        };
+    }
+}
+
+.content {
+    @include bgMainColor(aqua);
+    @include size(100px);
+    @include absoluteCenter("both");
+}

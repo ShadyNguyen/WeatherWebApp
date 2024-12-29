@@ -8,16 +8,16 @@
 // 3. Được gọi lại (trong hàm nhận đối số)
 
 
-Array.prototype.map2 = function(callback) { 
-    var output = [];
-    var arrayLength = this.length;
-    for (var i = 0; i < arrayLength; ++i) { 
-        var result = callback(this[i], i);
-        output.push(result);
-    }
+// Array.prototype.map2 = function(callback) { 
+//     var output = [];
+//     var arrayLength = this.length;
+//     for (var i = 0; i < arrayLength; ++i) { 
+//         var result = callback(this[i], i);
+//         output.push(result);
+//     }
 
-    return output;
-};
+//     return output;
+// };
 
 
 var courses = [
@@ -26,13 +26,13 @@ var courses = [
     'French',
 ]
 
-var htmls = courses.map2(function (course) {
-    if (typeof map2 === 'function') {
-        return `<h2>Course ${course}</h2>`
-    }
-});
+// var htmls = courses.map2(function (course) {
+//     if (typeof map2 === 'function') {
+//         return `<h2>Course ${course}</h2>`
+//     }
+// });
 
-console.log(htmls.join(' '));
+// console.log(htmls.join(' '));
 
 // function myFunction (param) {
 //     // console.log(typeof param)
@@ -46,3 +46,14 @@ console.log(htmls.join(' '));
 
 // myFunction(myFunction)
 
+// forEach, reduce, filter, find, some ,every
+
+// courses.forEach(function (course) {
+//     console.log(course);
+// });
+
+let i = ['English'];
+
+for(i of courses) {
+    console.log(courses[i]);
+}

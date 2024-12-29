@@ -1,0 +1,37 @@
+html {
+  font-size: 62.5%;
+}
+
+p {
+  color: purple;
+}
+
+body .header {
+  padding: 2rem;
+  background-color: aqua;
+}
+body .header-inner {
+  color: white;
+}
+body .header-inner-text {
+  font-weight: 600;
+}
+body .header-inner:hover {
+  color: aqua;
+}
+@media screen and (max-width: 1024px) {
+  body .header {
+    display: none;
+  }
+}
+
+.content {
+  background-color: aqua;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*# sourceMappingURL=index.css.map */

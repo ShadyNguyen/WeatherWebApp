@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "watch:css": "onchange \"src/sass/*.scss\" -- npm run scss",
+    "start": "npm-run-all -p serve watch:css"
+  },
+  "devDependencies": {
+    "sass": "^1.83.0"
+  },
+  "dependencies": {
+    "scss": "^0.2.4"
+  }
+}
